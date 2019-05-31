@@ -5,9 +5,9 @@ import './StarWars.css';
 function StarWarsLists(props) {
     console.log(props);
     return (
-        <div clasName='container'>
+        <div className='container'>
             {props.starwarsChars.map((char) => {
-                return <StarWars char={char} />
+                return <StarWars key={char.name} char={char} />
             })}
         </div>
     );
